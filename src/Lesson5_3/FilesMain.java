@@ -1,6 +1,7 @@
 package Lesson5_3;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 
 public class FilesMain {
 
@@ -25,11 +26,21 @@ public class FilesMain {
         System.out.println(reader.readAllFile());
     }
 
+    static void loadUserDataExample() {
+        UserDataReader dataReader = new UserDataReader("files/lesson5_3/readUserData.txt");
+        try {
+            dataReader.read();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        dataReader.show();
+    }
+
     public static void main(String[] args) {
     //    writeExample();
     //   readTestExample();
-        readAllFileExample();
-        
-        40:00
+//        readAllFileExample();
+       loadUserDataExample();
+
     }
 }
