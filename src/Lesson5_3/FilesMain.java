@@ -29,5 +29,7 @@ public class FilesMain {
     //    writeExample();
     //   readTestExample();
         readAllFileExample();
+        
+        40:00
     }
 }
