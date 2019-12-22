@@ -18,7 +18,8 @@ public class MyFileWriter {
     public boolean write(String text, boolean append) {
         try {
             FileWriter writer = new FileWriter(path, append);   // path - путь к файлу для записи данных
-            // append = true -
+            // append = true - дописываем в конец файла
+            // append = false - стираем все данные в файле и зписываем новые
             writer.write(text); // записываем текст в файл (на самом деле в буфер)
             writer.flush();     // записываем из буфера в файл
             writer.close();     // обязательный элемент- закрывает поток записи

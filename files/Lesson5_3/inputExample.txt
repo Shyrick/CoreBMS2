@@ -1,0 +1,3 @@
+Text for test write to the file
+ next string of test
+ OK!!!
