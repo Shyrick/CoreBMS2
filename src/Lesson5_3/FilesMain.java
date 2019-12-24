@@ -2,6 +2,7 @@ package Lesson5_3;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 
 public class FilesMain {
 
@@ -36,11 +37,42 @@ public class FilesMain {
         dataReader.show();
     }
 
+    static void chengeAndWriteUserDataExample() {
+        UserDataReader dataReader = new UserDataReader("files/lesson5_3/readUserData.txt");
+        try {
+            dataReader.read();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        dataReader.show();
+
+        dataReader.chengeUser();
+        try {
+            dataReader.writeUserData();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        dataReader.show();
+    }
+
+    static void readFromLineUserDataExample() {
+        UserDataReader dataReader = new UserDataReader("files/lesson5_3/readUserData.txt");
+        try {
+            dataReader.readFromLine("files/lesson5_3/UserDataLine.txt");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        dataReader.show();
+    }
+
     public static void main(String[] args) {
     //    writeExample();
     //   readTestExample();
 //        readAllFileExample();
-       loadUserDataExample();
+//       loadUserDataExample();
+//       chengeAndWriteUserDataExample();
+        readFromLineUserDataExample();
+
 
     }
 }

@@ -1,5 +1,5 @@
 5
-1 2 30 4 -5
-UserNeme
-15
-Star
+1 2 30 4 -5 
+UserName
+22
+newWord
