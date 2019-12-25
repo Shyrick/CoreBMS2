@@ -1,9 +1,6 @@
 package Lesson5_3.L52_practice;
 
-import Lesson5_3.L52_practice.Products.IdCeeper;
-import Lesson5_3.L52_practice.Products.Smartfone;
-import Lesson5_3.L52_practice.Products.Vegetable;
-import Lesson5_3.L52_practice.Products.Water;
+import Lesson5_3.L52_practice.Products.*;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
@@ -21,11 +18,14 @@ public class MainStore extends Application {
     public void start(Stage primaryStage) throws Exception {
 
         IdCeeper idCeeper = new IdCeeper();
-        Smartfone smartfone1 = new Smartfone(idCeeper.generateSmartfoneId(),"Nokia", 3, "Very good", 120);
-        Vegetable vegetable1 = new Vegetable(idCeeper.generateVegetableId(), "Carrot",10,"Long and red", 4.5, 60);
-        Water water = new Water(idCeeper.generateWaterId(),"Borgomi", 40, "Made in Georgia", 2);
+//        Smartfone smartfone1 = new Smartfone(idCeeper.generateSmartfoneId(),"Nokia", 3, "Very good", 120);
+        ProductReadWriter readWriter = new ProductReadWriter("files/Lesson5_3/L5_2_pr_Store/Smartfones.txt",
+                "files/Lesson5_3/L5_2_pr_Store/Vegetables.txt", "files/Lesson5_3/L5_2_pr_Store/Waters.txt");
+        Smartfone[] smartfones = readWriter.readSmartfonesFromFile();
+        Vegetable [] vegetables = readWriter.readVegetablesFromFile();
+        Заменить Water water = new Water(idCeeper.generateWaterId(),"Borgomi", 40, "Made in Georgia", 2);
 
-        Store store = new Store(1000,new Smartfone[]{smartfone1}, new Vegetable[] {vegetable1}, new Water[]{water});
+        Store store = new Store(1000, smartfones, vegetables, new Water[]{water});
         WindowForms windowForms = new WindowForms(store);
         WindowStore windowStore = new WindowStore(idCeeper, store, windowForms);
 

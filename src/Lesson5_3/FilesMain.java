@@ -56,13 +56,23 @@ public class FilesMain {
     }
 
     static void readFromLineUserDataExample() {
-        UserDataReader dataReader = new UserDataReader("files/lesson5_3/readUserData.txt");
+        UserDataReader dataLineReader = new UserDataReader(" ");
         try {
-            dataReader.readFromLine("files/lesson5_3/UserDataLine.txt");
+            dataLineReader.readFromLine("files/lesson5_3/UserDataLine.txt");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        dataReader.show();
+        dataLineReader.show();
+    }
+
+    static void readFromTwoLineUserDataExample() {
+        UserDataReader dataTwoLineReader = new UserDataReader(" ");
+        try {
+            dataTwoLineReader.readFromTwoLine("files/lesson5_3/UserDataTwoLines.txt");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        dataTwoLineReader.show2();
     }
 
     public static void main(String[] args) {
@@ -71,8 +81,9 @@ public class FilesMain {
 //        readAllFileExample();
 //       loadUserDataExample();
 //       chengeAndWriteUserDataExample();
-        readFromLineUserDataExample();
-
+  //      readFromLineUserDataExample();
+readFromTwoLineUserDataExample();
+//1:00:00
 
     }
 }
