@@ -28,7 +28,7 @@ public class FilesMain {
     }
 
     static void loadUserDataExample() {
-        UserDataReader dataReader = new UserDataReader("files/lesson5_3/readUserData.txt");
+        UserDataReaderWriter dataReader = new UserDataReaderWriter("files/lesson5_3/readUserData.txt");
         try {
             dataReader.read();
         } catch (FileNotFoundException e) {
@@ -38,7 +38,7 @@ public class FilesMain {
     }
 
     static void chengeAndWriteUserDataExample() {
-        UserDataReader dataReader = new UserDataReader("files/lesson5_3/readUserData.txt");
+        UserDataReaderWriter dataReader = new UserDataReaderWriter("files/lesson5_3/readUserData.txt");
         try {
             dataReader.read();
         } catch (FileNotFoundException e) {
@@ -56,7 +56,7 @@ public class FilesMain {
     }
 
     static void readFromLineUserDataExample() {
-        UserDataReader dataLineReader = new UserDataReader(" ");
+        UserDataReaderWriter dataLineReader = new UserDataReaderWriter(" ");
         try {
             dataLineReader.readFromLine("files/lesson5_3/UserDataLine.txt");
         } catch (FileNotFoundException e) {
@@ -66,7 +66,7 @@ public class FilesMain {
     }
 
     static void readFromTwoLineUserDataExample() {
-        UserDataReader dataTwoLineReader = new UserDataReader(" ");
+        UserDataReaderWriter dataTwoLineReader = new UserDataReaderWriter(" ");
         try {
             dataTwoLineReader.readFromTwoLine("files/lesson5_3/UserDataTwoLines.txt");
         } catch (FileNotFoundException e) {

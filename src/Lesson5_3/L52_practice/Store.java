@@ -1,9 +1,6 @@
 package Lesson5_3.L52_practice;
 
-import Lesson5_3.L52_practice.Products.Product;
-import Lesson5_3.L52_practice.Products.Smartfone;
-import Lesson5_3.L52_practice.Products.Vegetable;
-import Lesson5_3.L52_practice.Products.Water;
+import Lesson5_3.L52_practice.Products.*;
 
 public class Store {
 
@@ -13,6 +10,7 @@ public class Store {
     Water[] waters;
     String [] products;
     Product curentProduct;
+    ProductWriter writer;
 
     public Store(double money, Smartfone[] smartfones, Vegetable[] vegetables, Water[] waters) {
         this.money = money;
@@ -21,6 +19,7 @@ public class Store {
         this.waters = waters;
         this.products = new String[]{"Smartfone", "Vegetables", "Water" };
         this.curentProduct = null;
+        writer = new ProductWriter();
     }
 
     public Product getCurentProduct() {
@@ -34,6 +33,8 @@ public class Store {
         }
         newArray[newArray.length-1] = newSmartfone;
         smartfones = newArray;
+       writer.writeSmartfonesToFile(smartfones);
+
     }
 
     public void addVegetableToArray (Vegetable newVegetable){
@@ -43,6 +44,7 @@ public class Store {
         }
         newArray[newArray.length-1] = newVegetable;
         vegetables = newArray;
+        writer.writeVegetableToFile(vegetables);
     }
 
     public void addWaterToArray (Water newWater){
@@ -52,6 +54,7 @@ public class Store {
         }
         newArray[newArray.length-1] = newWater;
         waters = newArray;
+        writer.writeWaterToFile(waters);
     }
 
     public Product findProductById (Product[] products, int id){
@@ -85,4 +88,15 @@ public class Store {
         }
     }
 
+    public Smartfone[] getSmartfones() {
+        return smartfones;
+    }
+
+    public Vegetable[] getVegetables() {
+        return vegetables;
+    }
+
+    public Water[] getWaters() {
+        return waters;
+    }
 }

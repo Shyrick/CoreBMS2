@@ -22,8 +22,20 @@ public abstract class Product {
         return id;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public int getAmount() {
         return amount;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public double getPrice() {
+        return price;
     }
 
     public abstract void show();

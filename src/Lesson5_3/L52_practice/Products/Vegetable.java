@@ -9,6 +9,9 @@ public class Vegetable extends Product {
         this.shelfLife = shelfLife;
     }
 
+    public int getShelfLife() {
+        return shelfLife;
+    }
 
     @Override
     public String toString() {

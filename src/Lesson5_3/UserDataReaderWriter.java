@@ -6,7 +6,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class UserDataReader {
+public class UserDataReaderWriter {
 
     private String path;
     User user;
@@ -16,7 +16,7 @@ public class UserDataReader {
 //    private String userFavoriteWord;
 //    private int[] array;
 
-    public UserDataReader(String path) {
+    public UserDataReaderWriter(String path) {
         this.path = path;
     }
 
@@ -53,6 +53,8 @@ public class UserDataReader {
 
         writer.write(String.valueOf(user.getArray().length));
         writer.write("\n");
+      // или одной строкой  writer.write(user.getArray().length + "\n");  !!! int + String = String
+
         for(int i = 0; i < user.getArray().length; i++) {
             writer.write(user.getArray()[i] + " ");
         }
@@ -64,6 +66,7 @@ public class UserDataReader {
         writer.flush();
         writer.close();
     }
+
     public void readFromLine(String path) throws FileNotFoundException {
         FileInputStream stream = new FileInputStream(path);
         Scanner scanner = new Scanner(stream);

@@ -2,17 +2,17 @@ package Lesson5_3.L52_practice.Products;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Scanner;
 
-public class ProductReadWriter {
-    String pathToSmartfones;
-    String pathToVegetables;
-    String pathToWater;
+public class ProductRead {
+    String pathToSmartfones = "files/Lesson5_3/L5_2_pr_Store/Smartfones.txt";
+    String pathToVegetables = "files/Lesson5_3/L5_2_pr_Store/Vegetables.txt";
+    String pathToWaters = "files/Lesson5_3/L5_2_pr_Store/Waters.txt";
 
-    public ProductReadWriter(String pathToSmartfones, String pathToVegetables, String pathToWater) {
-        this.pathToSmartfones = pathToSmartfones;
-        this.pathToVegetables = pathToVegetables;
-        this.pathToWater = pathToWater;
+    public ProductRead() {
+
     }
 
     public Smartfone [] readSmartfonesFromFile() throws FileNotFoundException {
@@ -30,6 +30,7 @@ public class ProductReadWriter {
         }
         return smartfones;
     }
+
     public Vegetable [] readVegetablesFromFile() throws FileNotFoundException {
         FileInputStream stream = new FileInputStream(pathToVegetables);
         Scanner scanner = new Scanner(stream);
@@ -46,8 +47,9 @@ public class ProductReadWriter {
         }
         return vegetables;
     }
+
     public Water [] readWatersFromFile() throws FileNotFoundException {
-        FileInputStream stream = new FileInputStream(pathToVegetables);
+        FileInputStream stream = new FileInputStream(pathToWaters);
         Scanner scanner = new Scanner(stream);
         int length = scanner.nextInt();
         Water [] waters = new Water[length];
@@ -61,4 +63,5 @@ public class ProductReadWriter {
         }
         return waters;
     }
+
 }
