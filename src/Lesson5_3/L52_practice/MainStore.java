@@ -17,7 +17,7 @@ public class MainStore extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
 
-        IdCeeper idCeeper = new IdCeeper();
+
 //        Smartfone smartfone1 = new Smartfone(idCeeper.generateSmartfoneId(),"Nokia", 3, "Very good", 120);
         ProductRead readWriter = new ProductRead();
         Smartfone[] smartfones = readWriter.readSmartfonesFromFile();
@@ -25,6 +25,7 @@ public class MainStore extends Application {
         Water [] waters = readWriter.readWatersFromFile();
 
         Store store = new Store(1000, smartfones, vegetables, waters);
+        IdCeeper idCeeper = new IdCeeper(store);
         WindowForms windowForms = new WindowForms(store);
         WindowStore windowStore = new WindowStore(idCeeper, store, windowForms);
 

@@ -6,10 +6,10 @@ public abstract class Product {
     public String name;
     public int amount;
     public  String description;
-    public double price;
+    public int price;
 
 
-    public Product( int id, String name, int amount, String description, double price) {
+    public Product( int id, String name, int amount, String description, int price) {
 
         this.id = id;
         this.name = name;
@@ -34,7 +34,7 @@ public abstract class Product {
         return description;
     }
 
-    public double getPrice() {
+    public int getPrice() {
         return price;
     }
 

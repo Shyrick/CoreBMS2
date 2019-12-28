@@ -1,4 +1,4 @@
-package Lesson5_3;
+package Lesson5_3.ReadWriteOperations;
 
 import java.io.FileWriter;
 import java.io.IOException;

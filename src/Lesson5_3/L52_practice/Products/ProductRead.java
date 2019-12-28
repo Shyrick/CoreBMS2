@@ -25,7 +25,7 @@ public class ProductRead {
             String name = scanner.next();
             int amount = scanner.nextInt();;
             String description = scanner.next();;
-            double price = scanner.nextDouble();
+            int price = scanner.nextInt();
             smartfones [i] = new Smartfone(id, name, amount, description, price);
         }
         return smartfones;
@@ -41,7 +41,7 @@ public class ProductRead {
             String name = scanner.next();
             int amount = scanner.nextInt();
             String description = scanner.next();
-            double price = scanner.nextDouble();
+            int price = scanner.nextInt();
             int shelfLife = scanner.nextInt();
             vegetables [i] = new Vegetable(id, name, amount, description, price, shelfLife);
         }
@@ -58,7 +58,7 @@ public class ProductRead {
             String name = scanner.next();
             int amount = scanner.nextInt();
             String description = scanner.next();
-            double price = scanner.nextDouble();
+            int price = scanner.nextInt();
             waters [i] = new Water(id, name, amount, description, price);
         }
         return waters;

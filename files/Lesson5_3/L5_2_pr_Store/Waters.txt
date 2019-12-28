@@ -1,3 +1,5 @@
-2
-1 Borgomi 40 Made_in_Georgia 2.0d
-4 eee 34 dfdd 4.0d
+4
+1 Borgomi 40 Made_in_Georgia 2
+2 eee 34 dfdd 4
+3 www 14 POPO 2
+4 dfdf 5 dfdf 3

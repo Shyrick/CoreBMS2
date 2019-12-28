@@ -5,7 +5,7 @@ public class Smartfone  extends Product {
     IdCeeper idCeeper;
 
 
-    public Smartfone(int id, String name, int amount, String description, double price) {
+    public Smartfone(int id, String name, int amount, String description, int price) {
         super(id, name, amount, description, price);
     }
 

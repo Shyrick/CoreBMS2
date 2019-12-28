@@ -1,4 +1,7 @@
-3
-1 Nokia 3 Very_good 120.5d
-1 GGG 22 YGgjhjhhj 2323.0d
-2 xcxc 12 dfdfd 3333.0d
+6
+1 Nokia 3 Very_good 120
+2 GGG 22 YGgjhjhhj 2323
+3 xcxc 12 dfdfd 3333
+4 yyy 12 hhhhh 33
+5 pppp 23 oioooo 55
+6 fgfgfg 4 eeeee 67

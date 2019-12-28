@@ -1,6 +1,4 @@
-package Lesson5_3;
-
-import Lesson5_3.User;
+package Lesson5_3.ReadWriteOperations;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

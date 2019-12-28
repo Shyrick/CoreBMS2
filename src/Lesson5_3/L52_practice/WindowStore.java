@@ -67,7 +67,7 @@ public class WindowStore {
             String name =  windowForms.tfName.getText();
             int amount = Integer.valueOf(windowForms.tfAmount.getText());
             String description = windowForms.tfDescription.getText();
-            double price = Double.valueOf(windowForms.tfPrice.getText());
+            int price = Integer.valueOf(windowForms.tfPrice.getText());
 
             Smartfone smartfone = new Smartfone(idCeeper.generateSmartfoneId(), name, amount, description,price);
             store.addSmartfoneToArray(smartfone);
@@ -90,10 +90,10 @@ public class WindowStore {
             String name =  windowForms.tfName.getText();
             int amount = Integer.valueOf(windowForms.tfAmount.getText());
             String description = windowForms.tfDescription.getText();
-            double price = Double.valueOf(windowForms.tfPrice.getText());
+            int price = Integer.valueOf(windowForms.tfPrice.getText());
             int shelfLife = Integer.valueOf(windowForms.tfShelfLife.getText());
 
-            Vegetable vegetable = new Vegetable(idCeeper.generateSmartfoneId(), name, amount, description,price, shelfLife);
+            Vegetable vegetable = new Vegetable(idCeeper.generateVegetableId(), name, amount, description,price, shelfLife);
             store.addVegetableToArray(vegetable);
             // Оповещение об удачном добавлении товара
             frontRoot.getChildren().clear();
@@ -116,9 +116,9 @@ public class WindowStore {
             String name =   windowForms.tfName.getText();
             int amount = Integer.valueOf( windowForms.tfAmount.getText());
             String description =  windowForms.tfDescription.getText();
-            double price = Double.valueOf( windowForms.tfPrice.getText());
+            int price = Integer.valueOf( windowForms.tfPrice.getText());
 
-            Water water = new Water(idCeeper.generateSmartfoneId(), name, amount, description,price);
+            Water water = new Water(idCeeper.generateWaterId(), name, amount, description,price);
             store.addWaterToArray(water);
             frontRoot.getChildren().clear();
             Text text1 = new Text(water.toString() + " \n   успешно добавлен");

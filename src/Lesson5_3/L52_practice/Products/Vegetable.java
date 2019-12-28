@@ -4,7 +4,7 @@ public class Vegetable extends Product {
     IdCeeper idCeeper;
     public int shelfLife;
 
-    public Vegetable(int id, String name, int amount, String description, double price, int shelfLife) {
+    public Vegetable(int id, String name, int amount, String description, int price, int shelfLife) {
         super(id, name, amount, description, price);
         this.shelfLife = shelfLife;
     }
