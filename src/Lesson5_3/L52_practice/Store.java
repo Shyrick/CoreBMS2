@@ -4,7 +4,7 @@ import Lesson5_3.L52_practice.Products.*;
 
 public class Store {
 
-    public double money;
+    public int money;
     Smartfone[] smartfones;
     Vegetable[] vegetables;
     Water[] waters;
@@ -12,7 +12,7 @@ public class Store {
     Product curentProduct;
     ProductWriter writer;
 
-    public Store(double money, Smartfone[] smartfones, Vegetable[] vegetables, Water[] waters) {
+    public Store(int money, Smartfone[] smartfones, Vegetable[] vegetables, Water[] waters) {
         this.money = money;
         this.smartfones = smartfones;
         this.vegetables = vegetables;
@@ -69,6 +69,7 @@ public class Store {
 
     public void buyCurrentProduct (Product[] products, Product curentProduct){
 //В массиве товаров уменьшаем колличестов у текущего товара на 1
+        // и сумму в магазине нужно увеличить на стоимость товара(это не делал)
         findProductById(products, curentProduct.getId()).amount --;
     }
 

@@ -11,8 +11,8 @@ public class IdCeeper {
     }
 
     public int generateSmartfoneId(){
-        Smartfone [] smartfones = store.getSmartfones();
-        int newId = smartfones[smartfones.length -1].getId() + 1; // увеличиваем на 1 последнее значение в массиве
+//        Smartfone [] smartfones = store.getSmartfones();
+        int newId = store.getSmartfones()[store.getSmartfones().length -1].getId() + 1; // увеличиваем на 1 последнее значение в массиве
         return newId;
     }
 
