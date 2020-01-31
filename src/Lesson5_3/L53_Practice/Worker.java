@@ -1,4 +1,4 @@
-package Lesson5_3.L5_3_Practice;
+package Lesson5_3.L53_Practice;
 
 public abstract class Worker {
     public String name;
