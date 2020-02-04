@@ -1,6 +1,8 @@
 package Lesson6;
 
 
+import Lesson6.Generic.Dog;
+
 import java.util.Iterator;
 import java.util.LinkedList;
 
@@ -11,6 +13,9 @@ public class LinkedListExample {
         // Значения хранятся в НОДЕ и каждая нода имеет ссылку на следующую ноду (односвязный список)
         // и на предыдущую ноду (двусвязный список)
         // первая  и последняя ноды имеют ссылки на null
+
+        // Достоинства: быстрое добавление и удаление.
+        // Недостаток: медленные считывание и запись
 
         linkedList.addLast(new Dog("ddd", 3)); // Добавляем в конец коллекции
         linkedList.addLast(new Dog("aaa", 4));
@@ -26,7 +31,7 @@ public class LinkedListExample {
         while (iterator.hasNext()){
             Dog dog = iterator.next();
             System.out.println(dog.getName());
-            37:00
+
         }
 
 

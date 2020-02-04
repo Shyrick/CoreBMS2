@@ -10,6 +10,8 @@ public class Car extends Vehicle {
         super(speed, mass);
     }
 
+    public Car() {
+    }
 
     @Override                // В дочерних класса JeepCar и SuperCar этот метод уже  реализовывать не нужно!!!
     public void moove() {
