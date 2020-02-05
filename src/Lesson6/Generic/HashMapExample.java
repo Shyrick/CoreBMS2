@@ -27,7 +27,7 @@ public class HashMapExample  {
         dog = dogs.get("000");
         System.out.println(dog);// выводит null
 
-        1^23^00
+
 
     }
 }
