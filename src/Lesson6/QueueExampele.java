@@ -5,9 +5,10 @@ import java.util.LinkedList;
 public class QueueExampele {
     public static void main(String[] args) {
         LinkedList<Integer> queue = new LinkedList<>();
-        queue.push(1); //
-        queue.push(2);
-        queue.push(3);
+
+//        queue.push(1);
+//        queue.push(2);
+//        queue.push(3);
 
 //        queue.peek();// считывает первый элемент без удаления
 //        queue.peekFirst();
@@ -22,6 +23,26 @@ public class QueueExampele {
 //        System.out.println(queue.peek()); // Вывод 3 (работет как стэк)
         System.out.println(queue.poll()); // Вывод 3 (работет как стэк)
 
-        1^42^00
+        int x = 1;
+        queue.push(x++);    System.out.println("add " + (x-1));
+        queue.push(x++);    System.out.println("add " + (x-1));
+        queue.push(x++);    System.out.println("add " + (x-1));
+        System.out.println(queue.pollLast());
+        System.out.println(queue.pollLast());
+        System.out.println(queue.pollLast());
+        queue.push(x++);     System.out.println("add " + (x-1));
+        queue.push(x++);     System.out.println("add " + (x-1));
+        System.out.println(queue.pollLast());
+        queue.push(x++);     System.out.println("add " + (x-1));
+        queue.push(x++);     System.out.println("add " + (x-1));
+        System.out.println(queue.pollLast());
+        queue.push(x++);     System.out.println("add " + (x-1));
+        queue.push(x++);     System.out.println("add " + (x-1));
+        queue.push(x++);     System.out.println("add " + (x-1));
+
+        while (!queue.isEmpty()){ // Пока очередь не пустая, печатаем всех оставшихся
+            System.out.println(queue.pollLast());
+        }
+
     }
 }

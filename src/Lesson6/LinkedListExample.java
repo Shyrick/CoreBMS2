@@ -17,8 +17,8 @@ public class LinkedListExample {
         // Достоинства: быстрое добавление и удаление.
         // Недостаток: медленные считывание и запись
 
-        linkedList.addLast(new Dog("ddd", 3)); // Добавляем в конец коллекции
-        linkedList.addLast(new Dog("aaa", 4));
+        linkedList.addLast(new Dog("aaa", 3)); // Добавляем в конец коллекции
+        linkedList.addLast(new Dog("bbb", 4));
         linkedList.addLast(new Dog("ccc", 1  ));
 
         // У LinkedList нет индексов элементов, поэтому по нему нельзя пройтись циклом
@@ -31,9 +31,15 @@ public class LinkedListExample {
         while (iterator.hasNext()){
             Dog dog = iterator.next();
             System.out.println(dog.getName());
+        }
+        System.out.println("--------");
+
+        linkedList.add(1, new Dog("abcd", 9  ));
+        Iterator <Dog> iterator2 = linkedList.iterator();
+        while (iterator2.hasNext()){
+            Dog dog = iterator2.next();
+            System.out.println(dog.getName());
 
         }
-
-
     }
 }
