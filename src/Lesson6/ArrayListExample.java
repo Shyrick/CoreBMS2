@@ -5,9 +5,9 @@ import java.util.ArrayList;
 public class ArrayListExample {
 
     static void printArrayList(ArrayList <Integer> arrayList){
-        for (int i = 0; i < arrayList.size(); i++) {
-            System.out.print(arrayList.get(i));
-        }
+        for (int i = 0; i < arrayList.size(); i++) {        // Для прохода по ArrayList используется цикл,как и для
+            System.out.print(arrayList.get(i));             // массива, но длина ArrayList определяестя методом
+        }                                                   // .size()
         System.out.println();
     }
     public static void main(String[] args) {
@@ -33,6 +33,8 @@ public class ArrayListExample {
 
         arrayList.set(0, 9); // Заменим значение элемента с индексом 0 на новое (с 1 на 9)
         printArrayList(arrayList);
+
+
 
     }
 }

@@ -18,10 +18,16 @@ public class HashSetExample {
         hashSet.add(4);
         hashSet.add(3);
 
+        System.out.println("Вывод через for"); // Можно использовать для вывода всей коллекции
+        for (int i : hashSet   ) {
+            System.out.println(i);
+        }
+
         // По умолчанию HashSet упорядоченная (по возростанию) коллекция,
         // т.е. не смортя на порядок добавления, будет выводиться 1 2 3 4
 
         Iterator <Integer> iterator = hashSet.iterator();
+        System.out.println("Вывод через iterator");
         while (iterator.hasNext()){
             Integer x = iterator.next();
             System.out.println(x);
@@ -43,5 +49,14 @@ public class HashSetExample {
 //            }
 //        };
 //        HashSet<Integer> hashSet2 = new HashSet<Integer>(comparator);
+
+        // Конвертируем HashSet в массив
+        Integer[] myArray = hashSet.toArray(new Integer[hashSet.size()]);
+
+        System.out.println("Вывод после перевода HashSet в массив");
+        for (int i = 0; i < myArray.length; i++) {
+            System.out.println(myArray[i]);
+        }
+
     }
 }

@@ -24,4 +24,3 @@ public class InnerClassExample {
     }
 }
 
-52^00
