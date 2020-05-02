@@ -21,6 +21,8 @@ public class Dog <T> { // Здесь <Т> просто имя тияпа, кот
         this.age = age;
     }
 
+
+
     public Dog() {
     }
 
@@ -30,5 +32,22 @@ public class Dog <T> { // Здесь <Т> просто имя тияпа, кот
 
     public int getAge() {
         return age;
+    }
+
+//    @Override
+//    public String toString() {
+//        return "Dog{" +
+//                "name='" + getName() + '\'' +
+//                ", age=" + getAge() +
+//
+//                '}';
+//    }
+
+    @Override
+    public String toString() {
+        return "Dog{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
     }
 }

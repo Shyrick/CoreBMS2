@@ -24,17 +24,17 @@ public class GenericJsonExample {
 
         System.out.println();
 
-//        ArrayList<Node<DogEntity>> nodes2 = new ArrayList<>();
-//        nodes2.add(new Node<>(new DogEntity("bobik", 5), "the best dog"));
-//        nodes2.add(new Node<>(new DogEntity("sharik", 3), "the dog"));
-//
-//        String json2 = JSON.toJSONString(nodes2);
-//        System.out.println(json2);
-//
-//
-//        System.out.println();
-//        System.out.println();
-//
+        ArrayList<Node<DogEntity>> nodes2 = new ArrayList<>();
+        nodes2.add(new Node<>(new DogEntity("bobik", 5), "the best dog"));
+        nodes2.add(new Node<>(new DogEntity("sharik", 3), "the dog"));
+
+        String json2 = JSON.toJSONString(nodes2);
+        System.out.println(json2);
+
+
+        System.out.println();
+        System.out.println();
+
         TypeReference<ArrayList<Node<User>>> typeRef = new TypeReference<ArrayList<Node<User>>>() {};
         ArrayList<Node<User>> nodesClone = JSON.parseObject(json, typeRef);
         System.out.println(nodesClone);

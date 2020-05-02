@@ -1,5 +1,7 @@
 package Lesson6.Generic;
 
+import Lesson5_2.entities.A;
+
 import java.util.HashMap;
 
 public class HashMapExample  {
@@ -18,16 +20,20 @@ public class HashMapExample  {
         dogs.put("dog3", new Dog("dog3", 4));
         dogs.put("dog3", new Dog("dog3", 5)); // эта строка перезапишет объект с ключем dog3
 
+
+        System.out.println(dogs);
+
         Dog dog = dogs.get("dog3");
         System.out.println(dog.getAge());
+        Dog <A> dogA = new Dog<>();
+
 
         // Если попытаться достать из коллекции несуществующий объект, а точнее искать несуществующий ключ,
         // то вернется null
-
         dog = dogs.get("000");
         System.out.println(dog);// выводит null
 
-
+        System.out.println();
 
     }
 }
