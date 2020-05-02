@@ -1,23 +1,23 @@
-package Lesson7.Json.Entities;
+package Lesson7.Json.MyJsonTest;
+
+import Lesson7.Json.Entities.User;
 
 import java.util.ArrayList;
 
-public class Group {
+public class MyJsonTest {
+
     public String name;
-    public String discription;
     public ArrayList <User> users;
 
-    public Group(String name, String discription, ArrayList<User> users) {
+    public MyJsonTest(String name, ArrayList<User> users) {
         this.name = name;
-        this.discription = discription;
         this.users = users;
     }
 
     @Override
     public String toString() {
-        return "Group{" +
+        return "MyJsonTest{" +
                 "name='" + name + '\'' +
-                ", discription='" + discription + '\'' +
                 ", users=" + users +
                 '}';
     }

@@ -6,6 +6,11 @@ import com.alibaba.fastjson.JSON;
 
 import java.util.ArrayList;
 
+
+// В Мавен перед dependensies добавили тег <build></build> для корректной работы JDK
+// т.к. Мавен отбрасывает версию JDK назад
+
+
 public class AdvansedJsonExample {
 
     public static void main(String[] args) {
@@ -18,5 +23,10 @@ public class AdvansedJsonExample {
         Group group = new Group("Baskebol team", "bla bla bla", users);
         String json = JSON.toJSONString(group);
         System.out.println(json);
+
+        Group groupClone = JSON.parseObject(json, Group.class);
+        System.out.println("-----");
+        System.out.println(groupClone);
+        System.out.println(groupClone.users.get(0).name);
     }
 }

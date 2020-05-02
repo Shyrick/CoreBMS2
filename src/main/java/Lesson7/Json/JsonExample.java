@@ -29,7 +29,8 @@ public class JsonExample {
     // Maven - это правильный подход для работы с sdk
     //потом для других библиотек в этот же файл можно будет добавить свою (еще одну) <dependency> ... </dependency>
     //
-    //оро
+    //В Мавен перед dependensies добавили тег <build> </build> для корректной работы JDK
+    // т.к. Мавен отбрасывает версию JDK назад
 
 
 
@@ -38,7 +39,13 @@ public class JsonExample {
     public static String serialazeObject (DogEntity dog){ // запись объекта в Json
         // Импортируем класс JSON
         String json = JSON.toJSONString(dog);
+        String json2 = JSON.toJSONString(dog, true); // если добавить true - сторак будет не линейной,
+                                                                // а в виде удобного json-validator
         System.out.println(json);
+        System.out.println();
+        System.out.println("json2: ");
+        System.out.println(json2);
+        System.out.println();
         return json;
     }
 
@@ -54,6 +61,7 @@ public class JsonExample {
         String json = serialazeObject(new DogEntity("Bobik", 3));
         DogEntity dog = parsFromJson(json);
         System.out.println(dog);
+
     }
 
 

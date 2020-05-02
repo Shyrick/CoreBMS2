@@ -1,0 +1,20 @@
+{
+	"name":"Test myJsonTest",
+	"users":[
+		{
+			"age":50,
+			"gender":"male",
+			"name":"Tom"
+		},
+		{
+			"age":30,
+			"gender":"female",
+			"name":"Marge"
+		},
+		{
+			"age":10,
+			"gender":"male",
+			"name":"Mike"
+		}
+	]
+}
