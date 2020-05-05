@@ -1,0 +1,15 @@
+{
+ "fruits": [{
+   "fruitType": "Banana",
+   "shelfLife": 10,
+   "dateOfDelivery": "10/07/2020",
+   "price": 100
+  },
+  {
+   "fruitType": "Apple",
+   "shelfLife": 5,
+   "dateOfDelivery": "10/07/2020",
+   "price": 70
+  }
+ ]
+}
