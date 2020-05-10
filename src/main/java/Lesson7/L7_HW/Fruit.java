@@ -5,17 +5,19 @@ import com.alibaba.fastjson.annotation.JSONField;
 import java.util.Date;
 
 public class Fruit {
-    public FruitType fruitType;
-    public Integer shelfLife;
+    private FruitType fruitType;
+    private int shelfLife;
 
-    @JSONField(format="dd/MM/yyyy")
-    public Date dateOfDelivery;
-    public Integer price;
+//    @JSONField(format="dd/MM/yyyy")
+//    public Date dateOfDelivery;
+    // т.к. не получилось из json вытянуть дату, тип Data я заменил на месяц поставки с типом int
+    private int deliveryMonth;
+    private int price;
 
-    public Fruit(FruitType fruitType, int shelfLife, Date dateOfDelivery, Integer price) {
+    public Fruit(FruitType fruitType, int shelfLife, int deliveryMonth, int price) {
         this.fruitType = fruitType;
         this.shelfLife = shelfLife;
-        this.dateOfDelivery = dateOfDelivery;
+        this.deliveryMonth = deliveryMonth;
         this.price = price;
     }
 
@@ -23,13 +25,13 @@ public class Fruit {
         return fruitType;
     }
 
-    public int getShelf_life() {
+    public int getShelfLife() {
         return shelfLife;
     }
 
-//    public Date getDateOfDelivery() {
-//        return dateOfDelivery;
-//    }
+    public int getDeliveryMonth() {
+        return deliveryMonth;
+    }
 
     public Integer getPrice() {
         return price;
@@ -40,6 +42,7 @@ public class Fruit {
         return "Fruit{" +
                 "fruitType=" + fruitType +
                 ", shelfLife=" + shelfLife +
+                ", deliveryMonth=" + deliveryMonth +
                 ", price=" + price +
                 '}';
     }

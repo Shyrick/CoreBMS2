@@ -2,14 +2,14 @@
  "fruits": [{
    "fruitType": "Banana",
    "shelfLife": 3,
-   "deliveryMonth": 4,
-   "price": 100
+   "deliveryMonth": 7,
+   "price": 120
   },
   {
    "fruitType": "Apple",
    "shelfLife": 5,
-   "deliveryMonth": 4,
-   "price": 70
+   "deliveryMonth": 7,
+   "price": 90
   }
  ]
 }
