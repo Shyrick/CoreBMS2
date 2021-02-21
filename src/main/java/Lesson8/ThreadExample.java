@@ -13,5 +13,8 @@ public class ThreadExample {
                 System.out.println("Hello from new thread");
             }
         };
+
+        Thread thread = new Thread(runnable);
+        thread.start();
     }
 }

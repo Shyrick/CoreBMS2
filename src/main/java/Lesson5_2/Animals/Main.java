@@ -14,15 +14,16 @@ public class Main {
         dog.sound();
 
 
-        // !!!! МОЖНО создать объект абстарактного класса
+//         !!!! МОЖНО создать объект абстарактного класса
 
-//        Animal animal = new Animal() {
-//            @Override
-//            public void sound() {
-//
-//            }
-//        };
-//        animal.name = "jjj";
+        Animal animal = new Animal() {
+            @Override
+            public void sound() {
+
+            }
+        };
+        animal.name = "jjj";
+        System.out.println(animal.name);
 
     }
 }
