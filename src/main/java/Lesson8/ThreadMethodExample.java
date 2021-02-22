@@ -1,6 +1,6 @@
 package Lesson8;
 
-public class ThreadMethodExample { 1:42:00
+public class ThreadMethodExample {
 
     static Thread showTimer2 (int timer){
             Thread thread = new Thread(new Runnable() {
