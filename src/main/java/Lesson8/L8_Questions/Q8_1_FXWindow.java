@@ -25,7 +25,7 @@ public class Q8_1_FXWindow extends Application {
         output.setTranslateY(200);
 
         root.getChildren().addAll(input, launch, output);
-        stpo 08:21
+
     }
     @Override
     public void start(Stage primaryStage) throws Exception {
