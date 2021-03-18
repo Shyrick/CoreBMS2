@@ -2,11 +2,10 @@ package Lesson8.L8_Questions;
 
 import java.util.Scanner;
 
-public class MultiThreadDemo {
-    39:00
+public class MultiThreadDemo { 1:09:00
 
-    public static void MultiFibonacci (int n, int countOfTreads) throws InterruptedException {
-      //  int cores = Runtime.getRuntime().availableProcessors();  - возвращает количество ядер системы
+    public static void MultiFibonacciThreads (int n, int countOfTreads) throws InterruptedException {
+        //  int cores = Runtime.getRuntime().availableProcessors();  - возвращает количество ядер системы
 
         Thread [] threads = new Thread [countOfTreads];
         for (int i = 0; i < countOfTreads ; i++) {
@@ -18,10 +17,14 @@ public class MultiThreadDemo {
 
         for (int i = 0; i < countOfTreads ; i++) {
             threads [i].join();
-
         }
+    }
 
+    public static void MultiFibonacci (int n, int countOfTreads) throws InterruptedException {
 
+        for (int i = 0; i < countOfTreads ; i++) {
+                fibonacci (n);
+        }
     }
 
 
@@ -32,11 +35,17 @@ public class MultiThreadDemo {
 
     public static void main(String[] args) throws InterruptedException {
         long startTime = System.currentTimeMillis();
-        MultiFibonacci (37, 5);
+        MultiFibonacci (39, 5);
         long endTime = System.currentTimeMillis();
         long duration = endTime - startTime;
-        System.out.println("duration = " + duration );
+        System.out.println("MultiFibonacci \t \t duration = " + duration );
+        System.out.println();
 
+        startTime = System.currentTimeMillis();
+        MultiFibonacciThreads (39, 5);
+        endTime = System.currentTimeMillis();
+        duration = endTime - startTime;
+        System.out.println("MultiFibonacciThreads \t \t duration = " + duration );
 
 //        Scanner scaner = new Scanner(System.in);
 //        int x = scaner.nextInt();
