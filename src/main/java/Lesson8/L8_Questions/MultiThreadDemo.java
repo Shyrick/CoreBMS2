@@ -2,7 +2,7 @@ package Lesson8.L8_Questions;
 
 import java.util.Scanner;
 
-public class MultiThreadDemo { 1:09:00
+public class MultiThreadDemo {
 
     public static void MultiFibonacciThreads (int n, int countOfTreads) throws InterruptedException {
         //  int cores = Runtime.getRuntime().availableProcessors();  - возвращает количество ядер системы
