@@ -1,4 +1,4 @@
-package Lesson8;
+package Lesson8.L8_Lection;
 
 public class L8_7_LambdaExample {
 

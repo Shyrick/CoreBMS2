@@ -1,6 +1,6 @@
-package Lesson8;
+package Lesson8.L8_Lection;
 
-public class ThreadExample {
+public class L8_1_ThreadExample {
 
     public static void main(String[] args) {
 

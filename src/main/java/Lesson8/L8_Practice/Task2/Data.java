@@ -3,9 +3,9 @@ package Lesson8.L8_Practice.Task2;
 import java.util.Arrays;
 
 public class Data {
-    public int [] numbers;
+    public long [] numbers;
 
-    public Data(int[] numbers) {
+    public Data(long[] numbers) {
         this.numbers = numbers;
     }
 

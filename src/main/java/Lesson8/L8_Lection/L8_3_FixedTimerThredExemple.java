@@ -1,8 +1,8 @@
-package Lesson8;
+package Lesson8.L8_Lection;
 
 import java.util.Scanner;
 
-public class FixedTimerThredExemple {
+public class L8_3_FixedTimerThredExemple {
 
 //     static int x = 0;
     static int x = 2;

@@ -2,7 +2,7 @@ package Lesson8.L8_Questions;
 
 import java.util.Scanner;
 
-public class MultiThreadDemo {
+public class Q8_2_MultiThreadDemo {
 
     public static void MultiFibonacciThreads (int n, int countOfTreads) throws InterruptedException {
         //  int cores = Runtime.getRuntime().availableProcessors();  - возвращает количество ядер системы
@@ -26,7 +26,6 @@ public class MultiThreadDemo {
                 fibonacci (n);
         }
     }
-
 
     public static long fibonacci (int x){
         if (x <- 1) return 1;

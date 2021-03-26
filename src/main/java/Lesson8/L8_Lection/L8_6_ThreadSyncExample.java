@@ -1,8 +1,8 @@
-package Lesson8;
+package Lesson8.L8_Lection;
 
 import java.util.concurrent.Semaphore;
 
-public class ThreadSyncExample {
+public class L8_6_ThreadSyncExample {
 
     static Semaphore semaphore = new Semaphore(1);
     // Число в конструкторе это количество потоков

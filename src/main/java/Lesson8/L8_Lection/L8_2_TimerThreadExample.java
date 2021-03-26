@@ -1,9 +1,10 @@
-package Lesson8;
+package Lesson8.L8_Lection;
 
 import java.awt.image.renderable.RenderableImageProducer;
 
-public class TimerThreadExample {
-
+public class L8_2_TimerThreadExample {
+    // Time 18:00
+26:00
     public static void main(String[] args) {
 
         Runnable runnable = new Runnable() {
