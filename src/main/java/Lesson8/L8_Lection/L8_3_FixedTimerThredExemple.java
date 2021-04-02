@@ -3,8 +3,9 @@ package Lesson8.L8_Lection;
 import java.util.Scanner;
 
 public class L8_3_FixedTimerThredExemple {
+    // Time 29:00
 
-//     static int x = 0;
+//     static int x = 0; - использовали, когда считывали х с консоли сканером
     static int x = 2;
     static Runnable runnable = new Runnable() {
         @Override
@@ -25,12 +26,12 @@ public class L8_3_FixedTimerThredExemple {
 
         }
     };
+
     public static void main(String[] args) {
 
-        Thread thread;
 //        Scanner scanner = new Scanner(System.in);
-
 //        x = scanner.nextInt();
+        Thread thread;
         thread = new Thread(runnable);
         thread.start();
 

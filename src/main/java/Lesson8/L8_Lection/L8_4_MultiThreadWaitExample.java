@@ -1,6 +1,6 @@
 package Lesson8.L8_Lection;
 
-public class L8_5_MultiThreadWaitExample {
+public class L8_4_MultiThreadWaitExample {
     static int x = 3;
     static Runnable runnable = new Runnable() {
         @Override

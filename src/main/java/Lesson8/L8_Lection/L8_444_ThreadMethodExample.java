@@ -1,6 +1,6 @@
 package Lesson8.L8_Lection;
 
-public class L8_4_ThreadMethodExample {
+public class L8_444_ThreadMethodExample {
 
     static Thread showTimer2 (int timer){
             Thread thread = new Thread(new Runnable() {
