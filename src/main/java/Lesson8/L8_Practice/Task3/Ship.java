@@ -50,37 +50,43 @@ public class Ship {
         Semaphore semaphore = new Semaphore(1);
         Random rd = new Random();
         int targetIndex;
-        semaphore.acquire();
-        if (ships.size() >1) {
-//            Thread.sleep(getCoolDown());
-//            if (ships.size() >1) {
+
+        System.out.println("Корабль " +getId() + " в потоке " +  Thread.currentThread().getName() + " заряжает орудие силой " + getDamage());
+        Thread.sleep(getCoolDown());
+
+        if (getHealsPoint() > 0) {
+            System.out.println();
+            System.out.println("ship id = " + getId() + " HealsPoint() > 0 готовится стрелять"  );
+            semaphore.acquire();
+            int count = 0;
+            int index = 0;
+
+//            System.out.println("count = " + count);
+//            if (count > 1) {
                 do {
+                    System.out.println("Корабль " + getId() + " выбирает цель");
                     targetIndex = rd.nextInt(ships.size());
-//            System.out.println(targetIndex);
-//            if ( ships [targetIndex].healsPoint > 0 ) System.out.println("true");
-//            else System.out.println("false");
-                }
-                while (ships.get(targetIndex) == null || getId() == ships.get(targetIndex).getId());
-                System.out.println("Корабль " + getId() + " заряжает орудие силой " + getDamage());
+                    System.out.println(" targetIndex = " + targetIndex);
 
-
-                if (ships.get(targetIndex).healsPoint > 0) {
-
-                    System.out.println("Корабль " + getId() + " стреляет по кораблю  " + targetIndex);
-                    ships.get(targetIndex).setHealsPoint(ships.get(targetIndex).getHealsPoint() - getDamage());
-                    if (ships.get(targetIndex).healsPoint > 0) {
-                        System.out.println("Корабль " + targetIndex + " поврежден. Остаток силы = " + ships.get(targetIndex).healsPoint);
-                    } else {
-                        System.out.println("Корабль " + targetIndex + " потоплен");
-                        ships.remove(targetIndex);
-                        shipsAmaunt--;
-                    }
-                } else {
-                    System.out.println("Цель не найдена");
+                    if ( ships.get(targetIndex).healsPoint <= 0) System.out.println("ship " + ships.get(targetIndex).getId()
+                            + ".healsPoint < 0");
+                    if ( ships.get(targetIndex).healsPoint > 0) System.out.println("ship " + ships.get(targetIndex).getId()+
+                            ".healsPoint > 0");
+                    if ( ships.get(targetIndex).healsPoint <= 0 || getId() == ships.get(targetIndex).getId())
+                        System.out.println("do randome againe");
 
                 }
-//            }
-        }else System.out.println("Победитель корабль " + ships.get(0));
+                while (ships.get(targetIndex).healsPoint <= 0 || getId() == ships.get(targetIndex).getId());
+                System.out.println("Корабль " + Thread.currentThread().getName() + " стреляет по кораблю  " + targetIndex);
+                ships.get(targetIndex).setHealsPoint(0);
+                System.out.println("Корабль " + targetIndex + " потоплен" + ships.get(targetIndex));
+
+//             } else System.out.println("Победитель корабль " + ships.get(index));
+
+        } else {
+            System.out.println();
+            System.out.println(Thread.currentThread().getName() + " не может стрелять");
+            }
 
         semaphore.release();
     }
