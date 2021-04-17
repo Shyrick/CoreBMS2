@@ -10,10 +10,9 @@ public class Main {
         for (int i = 0; i < ships.size(); i++) {
             if (ships.get(i).getHealsPoint() > 0) {
                 count++;
-
             }
         }
-        System.out.println("count == " + count);
+//        System.out.println(Thread.currentThread().getName() + " count == " + count);
         return count;
     }
 
@@ -35,7 +34,6 @@ public class Main {
             final int x = i;
             threads [i] = new Thread(() -> {
                 while (check(ships) > 1){
-
                     System.out.println(Thread.currentThread().getName() + " вызывает метод shoot");
                     try {
 //                       if (ships.get(x).getHealsPoint() > 0){
@@ -56,12 +54,14 @@ public class Main {
                         }
                     }
                     System.out.println("Бой окончен. Победитель - " + ships.get(index) );
-                    
+
                 }
             });
             threads [i].start();
 
+
         }
+
     }
 }
 
