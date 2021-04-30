@@ -9,6 +9,7 @@ public class L8_1_1_ThreadPoolExample {
         ExecutorService service = Executors.newFixedThreadPool(2);
         // Pool - это набор (группа) потоков, которые создаются и не умирают, а ждут новой задачи
         // так делают, чтобы не тратить время на создание потока
+        // ThreadPool возвращает объект Future
 
      //   service.submit()  метод отправляет задачу на выполнение
         // задачу можно написать тут же в виде лямбды
