@@ -75,6 +75,6 @@ public class L8_1_2_ThreadTasksExample {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         callable();
         futureTask();
+    }
 
-40:00
 }
