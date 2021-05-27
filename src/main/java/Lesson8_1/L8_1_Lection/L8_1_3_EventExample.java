@@ -26,6 +26,6 @@ public class L8_1_3_EventExample {
 
         new Thread(downloadInThread).start();
 
-        52:00
+
     }
 }
