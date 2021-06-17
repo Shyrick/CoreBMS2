@@ -17,9 +17,7 @@ public class L8_1_4_SmartObject <T> {
 
     public void setValue(T value) {
         this.value = value;
-
         for (int i = 0; i < onUpdate.size(); i++) {
-
             onUpdate.get(i).run(); // Здесь мы делаем так, чтобы при каждом переписывании значения переменной value
                                     // запускался каждый Runnable в массиве onUpdate
         }

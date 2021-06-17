@@ -25,6 +25,7 @@ public class L8_1_6_HTTPDownloadExample {
             String html = "";
             int b = 0;
             while ((b = reader.read()) != -1) { // reader.read() возвращает -1 в конце стрима (файла)
+                // т.е. мы считываем символ из потока и зависываем его в переменную b, пока метод read() не вернет -1
                 html += (char) b;
             }
             return html;
